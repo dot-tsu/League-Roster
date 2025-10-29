@@ -1,16 +1,16 @@
-import RiotApiClient from '../lib/riot-api-client.js'
-import RegionHelper from '../utils/region-helper.js'
+import RiotApiClient from './index.js'
+import { getRegionByServer } from './utils/region.js'
 
 export default class MatchProvider extends RiotApiClient {
   async getMatchIdsByPuuid(puuid, regionName) {
-    const regionBase = RegionHelper.getRegionByServer(regionName)
+    const regionBase = getRegionByServer(regionName)
     const url = `https://${regionBase}/lol/match/v5/matches/by-puuid/${puuid}/ids`
 
     return this.makeRequest(url)
   }
 
   async getMatchById(matchId, regionName) {
-    const regionBase = RegionHelper.getRegionByServer(regionName)
+    const regionBase = getRegionByServer(regionName)
     const url = `https://${regionBase}/lol/match/v5/matches/${matchId}`
 
     return this.makeRequest(url)

@@ -1,6 +1,6 @@
-import MasteryProvider from '../providers/mastery.js'
-import MatchProvider from '../providers/match.js'
-import SummonerProvider from '../providers/summoner.js'
+import MasteryProvider from '../providers/riot-api/mastery.js'
+import MatchProvider from '../providers/riot-api/match.js'
+import SummonerProvider from '../providers/riot-api/summoner.js'
 
 export default class RiotService {
   static init() {

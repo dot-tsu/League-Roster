@@ -1,10 +1,10 @@
-import CHAMPION_ID_TO_NAME from '../constants/champions.js'
-import RiotApiClient from '../lib/riot-api-client.js'
-import RegionHelper from '../utils/region-helper.js'
+import CHAMPION_ID_TO_NAME from '../../constants/champions.js'
+import RiotApiClient from './index.js'
+import { getRegionByServer, getServerUrl } from './utils/region.js'
 
 export default class MasteryProvider extends RiotApiClient {
   async getTopChampionMasteries(puuid, regionName, count = 3) {
-    const serverUrl = RegionHelper.getServerUrl(regionName)
+    const serverUrl = getServerUrl(regionName)
     const url = `https://${serverUrl}/lol/champion-mastery/v4/champion-masteries/by-puuid/${puuid}/top?count=${count}`
 
     return this.makeRequest(url)
