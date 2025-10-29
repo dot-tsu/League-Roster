@@ -19,15 +19,28 @@ app.use('*', async (context, next) => {
   await next()
 })
 
-// Test endpoint for blue saturday #fever from LAS region
-app.get('/test/riot', async (context) => {
-  try {
-    const userData = await RiotService.getUserBasicData('blue saturday', 'fever', 'las')
-    return context.json(userData)
-  }
-  catch (error) {
-    return context.json({ error: error.message }, 400)
-  }
-})
+// app.get('/test/riot', async (context) => {
+//   try {
+//     const userData = await RiotService.getUserBasicData('blue saturday', 'fever', 'las')
+//     return context.json(userData)
+//   }
+//   catch (error) {
+//     return context.json({ error: error.message }, 400)
+//   }
+// })
+
+// app.get('/test/roast', async (context) => {
+//   try {
+//     const userData = await RiotService.getUserBasicData('the pillows', 'las1', 'las')
+//     const roast = await AIService.roastPlayer(userData)
+//     return context.json({ 
+//       player: `${userData.account.gameName}#${userData.account.tagLine}`,
+//       roast: roast 
+//     })
+//   }
+//   catch (error) {
+//     return context.json({ error: error.message }, 400)
+//   }
+// })
 
 export default app
