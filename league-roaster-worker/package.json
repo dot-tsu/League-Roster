@@ -1,0 +1,18 @@
+{
+  "name": "league-roaster-worker",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "start": "wrangler dev",
+    "deploy": "wrangler deploy --minify",
+    "lint": "eslint . --fix"
+  },
+  "dependencies": {
+    "hono": "^4.10.3"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^6.1.0",
+    "eslint": "^9.38.0",
+    "wrangler": "^4.4.0"
+  }
+}
