@@ -1,6 +1,6 @@
-import { GeminiProvider } from '../providers/gemini.js'
+import GeminiProvider from '../providers/gemini.js'
 
-export class AIService {
+export default class AIService {
   static init() {
     this.provider = new GeminiProvider()
   }

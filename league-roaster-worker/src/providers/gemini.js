@@ -1,7 +1,7 @@
 import { GoogleGenAI } from '@google/genai'
-import { ConfigService } from '../services/config.js'
+import ConfigService from '../services/config.js'
 
-export class GeminiProvider {
+export default class GeminiProvider {
   constructor() {
     const apiKey = ConfigService.get('AI_API_KEY')
     this.googleGenAi = new GoogleGenAI({ apiKey })
