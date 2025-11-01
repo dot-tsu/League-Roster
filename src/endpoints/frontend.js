@@ -1,4 +1,4 @@
-async function frontendEndpoint(context) {
+async function frontendEndpoint() {
   const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,45 +9,46 @@ async function frontendEndpoint(context) {
     <script src="https://unpkg.com/htmx.org@2.0.3"></script>
     <script src="https://unpkg.com/htmx-ext-json-enc@2.0.1/json-enc.js"></script>
 </head>
-<body style="display: flex; flex-direction: column; justify-content: center; min-height: 100vh; padding: 24px;">
-    <main style="margin: 0 auto; max-width: 800px;">
-        <h1 style="text-align: center;">🔥 League roaster</h1>
-        <p style="text-align: center;">Get your League of Legends gameplay roasted by AI!</p>
-        
+<body>
+    <main style="margin: 0 auto; max-width: 800px; display: flex; flex-direction: column; justify-content: space-between; min-height: 100vh; padding: 24px;">
+        <div>
+            <h1 style="text-align: center;">🔥 League roaster</h1>
+            <p style="text-align: center;">Get your League of Legends gameplay roasted by AI!</p>
+        </div>
         <div id="content">
             <div id="form-container">
                 <form hx-post="/roast" hx-target="#content" hx-ext="json-enc">
                     <fieldset>
-                    <div style="display: flex; justify-content: center; align-items: center; gap: 12px;">
-                        <label>
-                            Summoner name & tag
-                            <input type="text" name="tag" placeholder="e.g. blue saturday #fever" required>
-                        </label>
-                        <label>
-                            Region
-                            <select name="region" required>
-                                <option value="">Select your region</option>
-                                <optgroup label="Americas">
-                                    <option value="na">North America</option>
-                                    <option value="br">Brazil</option>
-                                    <option value="lan">Latin America North</option>
-                                    <option value="las">Latin America South</option>
-                                </optgroup>
-                                <optgroup label="Europe">
-                                    <option value="euw">Europe West</option>
-                                    <option value="eune">Europe Nordic & East</option>
-                                    <option value="tr">Turkey</option>
-                                    <option value="ru">Russia</option>
-                                </optgroup>
-                                <optgroup label="Asia">
-                                    <option value="kr">Korea</option>
-                                    <option value="jp">Japan</option>
-                                </optgroup>
-                                <optgroup label="Oceania">
-                                    <option value="oce">Oceania</option>
-                                </optgroup>
-                            </select>
-                        </label>
+                        <div style="display: flex; justify-content: center; align-items: center; gap: 12px;">
+                            <label>
+                                Summoner name & tag
+                                <input type="text" name="tag" placeholder="e.g. blue saturday #fever" required>
+                            </label>
+                            <label>
+                                Region
+                                <select name="region" required>
+                                    <option value="">Select your region</option>
+                                    <optgroup label="Americas">
+                                        <option value="na">North America</option>
+                                        <option value="br">Brazil</option>
+                                        <option value="lan">Latin America North</option>
+                                        <option value="las">Latin America South</option>
+                                    </optgroup>
+                                    <optgroup label="Europe">
+                                        <option value="euw">Europe West</option>
+                                        <option value="eune">Europe Nordic & East</option>
+                                        <option value="tr">Turkey</option>
+                                        <option value="ru">Russia</option>
+                                    </optgroup>
+                                    <optgroup label="Asia">
+                                        <option value="kr">Korea</option>
+                                        <option value="jp">Japan</option>
+                                    </optgroup>
+                                    <optgroup label="Oceania">
+                                        <option value="oce">Oceania</option>
+                                    </optgroup>
+                                </select>
+                            </label>
                         </div>
                         <label>
                             Language
