@@ -9,7 +9,7 @@ async function frontendEndpoint(context) {
     <script src="https://unpkg.com/htmx.org@2.0.3"></script>
     <script src="https://unpkg.com/htmx-ext-json-enc@2.0.1/json-enc.js"></script>
 </head>
-<body style="display: flex; flex-direction: column; justify-content: center; min-height: 100vh;">
+<body style="display: flex; flex-direction: column; justify-content: center; min-height: 100vh; padding: 24px;">
     <main style="margin: 0 auto; max-width: 800px;">
         <h1 style="text-align: center;">🔥 League roaster</h1>
         <p style="text-align: center;">Get your League of Legends gameplay roasted by AI!</p>
@@ -60,7 +60,7 @@ async function frontendEndpoint(context) {
                             </select>
                         </label>
                     </fieldset>
-                    <button type="submit" hx-disable-elt="this">🔥 Roast Me!</button>
+                    <button type="submit" hx-disable-elt="this">🔥 Roast me!</button>
                 </form>
             </div>
         </div>
