@@ -1,4 +1,4 @@
-# 🔥 League roaster
+# 🔥 League roasted
 
 Get your League of Legends gameplay roasted by AI!
 
