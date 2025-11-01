@@ -1,21 +1,20 @@
-```txt
-npm install
-npm run dev
+# 🔥 League roaster
+
+Get your League of Legends gameplay roasted by AI!
+
+## What it does
+Enter your summoner name + tag → Get hilariously brutal (but fair) feedback on your performance.
+
+## Tech Stack
+- Cloudflare Workers
+- Riot Games API
+- Google Gemini AI
+- HTMX + PicoCSS
+
+## Run it
+```bash
+bun install
+bun run dev
 ```
 
-```txt
-npm run deploy
-```
-
-[For generating/synchronizing types based on your Worker configuration run](https://developers.cloudflare.com/workers/wrangler/commands/#types):
-
-```txt
-npm run cf-typegen
-```
-
-Pass the `CloudflareBindings` as generics when instantiation `Hono`:
-
-```ts
-// src/index.ts
-const app = new Hono<{ Bindings: CloudflareBindings }>()
-```
+Built for fun with friends. Don't take the roasts too seriously! 😄
