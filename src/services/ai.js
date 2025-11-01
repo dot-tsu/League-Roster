@@ -1,4 +1,4 @@
-import { createRoastPrompt } from '../prompts/roast-prompt.js'
+import { createRoastPrompt } from '../prompts/language-prompts.js'
 import GeminiProvider from '../providers/gemini.js'
 
 export default class AIService {
@@ -10,8 +10,8 @@ export default class AIService {
     return this.provider.chat(prompt)
   }
 
-  static roastPlayer(playerData) {
-    const roastPrompt = createRoastPrompt(playerData)
+  static roastPlayer(playerData, language = 'en') {
+    const roastPrompt = createRoastPrompt(playerData, language)
     return this.chat(roastPrompt)
   }
 }

@@ -47,6 +47,16 @@ async function frontendEndpoint(context) {
                                 </optgroup>
                             </select>
                         </label>
+                        <label>
+                            Language
+                            <select name="language">
+                                <option value="en">English</option>
+                                <option value="es">Español</option>
+                                <option value="fr">Français</option>
+                                <option value="de">Deutsch</option>
+                                <option value="pt">Português</option>
+                            </select>
+                        </label>
                     </fieldset>
                     <button type="submit" hx-disable-elt="this">🔥 Roast Me!</button>
                 </form>

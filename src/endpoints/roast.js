@@ -3,7 +3,7 @@ import RiotService from '../services/riot.js'
 
 async function roastEndpoint(context) {
   try {
-    const { tag, region } = await context.req.json()
+    const { tag, region, language = 'en' } = await context.req.json()
 
     if (!tag || !region) {
       return context.json({ error: 'Missing required fields: tag, region' }, 400)
@@ -15,11 +15,8 @@ async function roastEndpoint(context) {
 
     const [gameName, tagLine] = tag.split('#')
 
-    console.log('gameName:', gameName)
-    console.log('tagLine:', tagLine)
-
     const userData = await RiotService.getUserBasicData(gameName, tagLine, region)
-    const roast = await AIService.roastPlayer(userData)
+    const roast = await AIService.roastPlayer(userData, language)
 
     return context.json({
       player: `${userData.account.gameName}#${userData.account.tagLine}`,
