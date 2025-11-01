@@ -9,8 +9,8 @@ async function frontendEndpoint(context) {
     <script src="https://unpkg.com/htmx.org@2.0.3"></script>
     <script src="https://unpkg.com/htmx-ext-json-enc@2.0.1/json-enc.js"></script>
 </head>
-<body>
-    <main>
+<body style="display: flex; flex-direction: column; justify-content: center; min-height: 100vh;">
+    <main style="margin: 0 auto; max-width: 800px;">
         <h1 style="text-align: center;">🔥 League roaster</h1>
         <p style="text-align: center;">Get your League of Legends gameplay roasted by AI!</p>
         
@@ -18,6 +18,7 @@ async function frontendEndpoint(context) {
             <div id="form-container">
                 <form hx-post="/roast" hx-target="#content" hx-ext="json-enc">
                     <fieldset>
+                    <div style="display: flex; justify-content: center; align-items: center; gap: 12px;">
                         <label>
                             Summoner name & tag
                             <input type="text" name="tag" placeholder="e.g. blue saturday #fever" required>
@@ -47,6 +48,7 @@ async function frontendEndpoint(context) {
                                 </optgroup>
                             </select>
                         </label>
+                        </div>
                         <label>
                             Language
                             <select name="language">
