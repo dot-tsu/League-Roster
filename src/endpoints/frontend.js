@@ -64,6 +64,7 @@ async function frontendEndpoint(context) {
                 </form>
             </div>
         </div>
+        <p style="text-align: center;">Built for fun with friends. Don't take the roasts too seriously! 😄</p>
     </main>
 
     <script>
