@@ -17,4 +17,6 @@ bun install
 bun run dev
 ```
 
+**Don't forget:** Add your API keys to `.env` (check `.env.example`)
+
 Built for fun with friends. Don't take the roasts too seriously! 😄
