@@ -1,5 +1,7 @@
 import { Hono } from 'hono'
 import { cors } from 'hono/cors'
+import frontend from './endpoints/frontend.js'
+import roast from './endpoints/roast.js'
 import AIService from './services/ai.js'
 import ConfigService from './services/config.js'
 import RiotService from './services/riot.js'
@@ -19,28 +21,7 @@ app.use('*', async (context, next) => {
   await next()
 })
 
-// app.get('/test/riot', async (context) => {
-//   try {
-//     const userData = await RiotService.getUserBasicData('blue saturday', 'fever', 'las')
-//     return context.json(userData)
-//   }
-//   catch (error) {
-//     return context.json({ error: error.message }, 400)
-//   }
-// })
-
-// app.get('/test/roast', async (context) => {
-//   try {
-//     const userData = await RiotService.getUserBasicData('the pillows', 'las1', 'las')
-//     const roast = await AIService.roastPlayer(userData)
-//     return context.json({ 
-//       player: `${userData.account.gameName}#${userData.account.tagLine}`,
-//       roast: roast 
-//     })
-//   }
-//   catch (error) {
-//     return context.json({ error: error.message }, 400)
-//   }
-// })
+app.post('/roast', roast)
+app.get('/', frontend)
 
 export default app
