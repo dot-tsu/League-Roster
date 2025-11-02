@@ -1,8 +1,5 @@
 # 🔥 League roasted
 
-Get your League of Legends gameplay roasted by AI!
-
-## What it does
 Enter your summoner name + tag → Get hilariously brutal (but fair) feedback on your performance.
 
 ## Tech Stack
