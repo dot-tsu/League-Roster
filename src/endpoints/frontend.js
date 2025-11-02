@@ -6,6 +6,7 @@ async function frontendEndpoint() {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>League of legends roast</title>
     <meta name="description" content="Get your League of Legends gameplay roasted by AI!">
+    <link rel="icon" href="/favicon.ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css">
     <script src="https://unpkg.com/htmx.org@2.0.3"></script>
     <script src="https://unpkg.com/htmx-ext-json-enc@2.0.1/json-enc.js"></script>
