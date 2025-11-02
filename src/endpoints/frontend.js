@@ -4,7 +4,8 @@ async function frontendEndpoint() {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>League Roaster</title>
+    <title>League of legends roast</title>
+    <meta name="description" content="Get your League of Legends gameplay roasted by AI!">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css">
     <script src="https://unpkg.com/htmx.org@2.0.3"></script>
     <script src="https://unpkg.com/htmx-ext-json-enc@2.0.1/json-enc.js"></script>
@@ -12,7 +13,7 @@ async function frontendEndpoint() {
 <body>
     <main style="margin: 0 auto; max-width: 800px; display: flex; flex-direction: column; justify-content: space-between; min-height: 100vh; padding: 24px;">
         <div>
-            <h1 style="text-align: center;">🔥 League roaster</h1>
+            <h1 style="text-align: center;">🔥 League of legends roast</h1>
             <p style="text-align: center;">Get your League of Legends gameplay roasted by AI!</p>
         </div>
         <div id="content">

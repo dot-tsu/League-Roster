@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "lol-roaster",
+  "name": "lol-roast",
   "main": "src/index.js",
   "compatibility_date": "2025-10-29"
   // "compatibility_flags": [

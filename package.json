@@ -1,5 +1,5 @@
 {
-  "name": "league-roaster-worker",
+  "name": "lol-roast",
   "type": "module",
   "scripts": {
     "dev": "wrangler dev",
