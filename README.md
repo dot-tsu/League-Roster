@@ -1,4 +1,4 @@
-# 🔥 League roasted
+# 🔥 League of legends roast
 
 Enter your summoner name + tag → Get hilariously brutal (but fair) feedback on your performance.
 
